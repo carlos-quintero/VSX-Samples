@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+   <Extern href="stdidcmd.h"/>
+   <Extern href="vsshlids.h"/>
+
+   <Commands package="guidVSPackageDpiAwareness">
+      <Groups>
+         <Group guid="guidVSPackageDpiAwarenessCmdSet" id="MyMenuGroup" priority="0x0600">
+            <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS"/>
+         </Group>
+      </Groups>
+
+      <Buttons>
+         <Button guid="guidVSPackageDpiAwarenessCmdSet" id="CommandDpiAwareness" priority="0x0100" type="Button">
+            <Parent guid="guidVSPackageDpiAwarenessCmdSet" id="MyMenuGroup" />
+            <Icon guid="guidImages" id="bmpPic1" />
+            <Strings>
+               <ButtonText>Dpi Aware</ButtonText>
+            </Strings>
+         </Button>
+      </Buttons>
+
+      <Bitmaps>
+         <Bitmap guid="guidImages" href="Resources\CommandDpiAwareness.png" usedList="bmpPic1"/>
+      </Bitmaps>
+   </Commands>
+
+   <Symbols>
+      <GuidSymbol name="guidVSPackageDpiAwareness" value="{24c3cb3e-8420-4105-99ed-01643b99490a}" />
+
+      <GuidSymbol name="guidVSPackageDpiAwarenessCmdSet" value="{a461dc99-c7c1-484f-b420-5b6b72bad679}">
+         <IDSymbol name="MyMenuGroup" value="0x1020" />
+         <IDSymbol name="CommandDpiAwareness" value="0x0100" />
+      </GuidSymbol>
+
+      <GuidSymbol name="guidImages" value="{96b8161d-77f7-4a65-996d-6954bf40fb90}" >
+         <IDSymbol name="bmpPic1" value="1" />
+      </GuidSymbol>
+   </Symbols>
+
+</CommandTable>
